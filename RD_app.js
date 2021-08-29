@@ -5,8 +5,6 @@ const rollBtn = document.getElementById("jsRoll");
 const copyBtn = document.getElementById("jsCopy");
 const saveBtn = document.getElementById("jsSave");
 
-const DICE_SET = dice.value; //defualt = 100
-
 const DEFAULT_COLOR = "#2c2c2c";
 const CANVAS_SIZE = 300;
 
@@ -26,9 +24,11 @@ function handleCM(event) {
 }
 
 function handleRollClick() {
+  const DICE_SET = dice.value; //defualt = 100
+  const diceValue = Math.floor(Math.random() * DICE_SET)+1;
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  const diceValue = Math.floor(Math.random() * 100)+1;
+  
   ctx.fillStyle = "black";
   ctx.font = "28px san-serif";
   ctx.fillText("RESULT", 150, 120);
