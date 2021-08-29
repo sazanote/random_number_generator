@@ -32,7 +32,7 @@ function handleRollClick() {
   ctx.fillStyle = "black";
   ctx.font = "28px san-serif";
   ctx.fillText("RESULT", 150, 120);
-  ctx.font = "bold 86px cursive";
+  ctx.font = "bold 86px san-serif";
   ctx.fillText(diceValue, 150, 205);
 }
 
